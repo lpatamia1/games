@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Word</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Guess the Word</h1>
+        <div class="game-area">
+            <div class="hangman-box">
+                <svg height="250" width="200" class="hangman-svg">
+                    <line x1="60" y1="20" x2="140" y2="20" />
+                    <line x1="140" y1="20" x2="140" y2="50" />
+                    <line x1="60" y1="20" x2="60" y2="230" />
+                    <line x1="20" y1="230" x2="100" y2="230" />
+
+                    <circle class="body-part head" cx="140" cy="70" r="20" />
+                    <line class="body-part body" x1="140" y1="90" x2="140" y2="150" />
+                    <line class="body-part arm-left" x1="140" y1="120" x2="110" y2="100" />
+                    <line class="body-part arm-right" x1="140" y1="120" x2="170" y2="100" />
+                    <line class="body-part leg-left" x1="140" y1="150" x2="110" y2="180" />
+                    <line class="body-part leg-right" x1="140" y1="150" x2="170" y2="180" />
+                </svg>
+            </div>
+            <div class="word-display"></div>
+        </div>
+        <div class="keyboard"></div>
+    </div>
+
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <h2 id="modal-title">You Lost!</h2>
+            <p>The word was: <b id="correct-word"></b></p>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+:root {
+    --bg-dark: #1c2128;
+    --bg-medium: #2d333b;
+    --text-light: #cdd9e5;
+    --primary-blue: #539bf5;
+    --accent-green: #2ea043;
+    --accent-red: #da3633;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.game-area {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.hangman-svg {
+    fill: none;
+    stroke: var(--text-light);
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.body-part {
+    visibility: hidden; /* Hide all body parts initially */
+}
+
+.word-display {
+    display: flex;
+    gap: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.letter-box {
+    border-bottom: 3px solid var(--primary-blue);
+    width: 40px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+    gap: 8px;
+    max-width: 600px;
+    margin-top: 30px;
+}
+
+.key {
+    background-color: #444c56;
+    border: none;
+    border-radius: 6px;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.key:hover:not(:disabled) {
+    background-color: var(--primary-blue);
+}
+
+.key:disabled {
+    background-color: #2d333b;
+    color: #768390;
+    cursor: not-allowed;
+}
+
+/* Modal for Game Over */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Hide modal initially */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+}
+
+.modal-container.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    background-color: var(--bg-medium);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#play-again-btn {
+    background-color: var(--primary-blue);
+    color: var(--bg-dark);
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+}
