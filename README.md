@@ -1,4 +1,4 @@
-# Adventure - A Java Text-Based Game
+# Adventure Game - A Java Text-Based Game
 
 ## Description
 
