@@ -1,5 +1,14 @@
+:root {
+    --bg-dark: #1c2128;
+    --text-light: #cdd9e5;
+    --primary-blue: #ff69b4; 
+    --highlight-pink: #ff69b4;
+    --border-color: #444c56;
+}
+
 body {
-    background-color: #1c2128;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.85)), url('https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
     color: #cdd9e5;
     font-family: 'Roboto Mono', monospace;
     display: flex;
@@ -28,7 +37,7 @@ header {
 }
 
 header h1 {
-    color: #539bf5;
+    color: var(--primary-blue); /* This will remain blue if you want */
     margin: 0;
 }
 
@@ -54,7 +63,7 @@ header p {
     transition: transform 0.2s ease-out, background-color 0.2s ease-out;
 }
 
-.file-list a, .static-item {
+.file-list a {
     display: flex;
     align-items: center;
     padding: 15px;
@@ -63,8 +72,11 @@ header p {
 }
 
 .file-list a:hover {
-    background-color: #373e47;
+    background-color: #373e47; /* Background on hover remains dark */
     transform: scale(1.02);
+    /* NEW: Add a pink border and shadow on hover */
+    border: 1px solid var(--highlight-pink);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.4); /* Pink glow */
 }
 
 .icon {
@@ -88,4 +100,51 @@ header p {
     margin-top: 30px;
     color: #768390;
     font-style: italic;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 30px;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-light);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: var(--highlight-pink); /* NEW: Pink border on focus */
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); /* NEW: Pink glow on focus */
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    /* CHANGED: Use a muted grey color */
+    color: rgba(255, 105, 180, 0.5); 
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease-out;
+}
+
+.github-link:hover {
+    background-color: var(--highlight-pink);
+    border-color: var(--highlight-pink);
+    /* CHANGED: Use a bright white for better contrast */
+    color: #ffffff; 
+}
+.icon-github {
+    margin-right: 12px; /* Increased from 8px for more space */
+    fill: currentColor;
 }
