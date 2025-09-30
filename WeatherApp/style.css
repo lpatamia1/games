@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* A nice blue/purple gradient for the background */
+    background: linear-gradient(to right, #6a82fb, #fc5c7d);
+}
+
+.weather-container {
+    /* "Frosted glass" effect */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#city-input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+}
+
+#city-input::placeholder {
+    color: #eee;
+}
+
+#city-input:focus {
+    outline: none;
+    border-color: white;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: #6a82fb;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#search-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.weather-display {
+    /* Hide the placeholder content until data is loaded */
+    display: none;
+}
+
+#city-name {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+#temperature {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#weather-description {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin: 0;
+}
