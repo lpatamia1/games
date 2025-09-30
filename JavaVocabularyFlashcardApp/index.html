@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Vocab Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Java Vocabulary Flashcards</h1>
+
+        <div class="card-container">
+            <div class="card-inner">
+                <div class="card-front">
+                    <p class="term">static</p>
+                </div>
+                <div class="card-back">
+                    <p class="definition">A keyword that indicates a member belongs to the class itself, rather than to an instance of the class.</p>
+                    <pre class="code-example"><code>public class Car {
+    public static int carCount = 0;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button id="prev-btn">Previous</button>
+            <button id="shuffle-btn">Shuffle</button>
+            <button id="next-btn">Next</button>
+        </div>
+        
+        <p class="card-counter">1 / 10</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
