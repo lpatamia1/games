@@ -27,7 +27,7 @@ You must have a **Java Development Kit (JDK)** installed on your system to compi
 3.  Navigate to the directory where you saved `MysteryAdventureGame.java`.
 4.  **Compile** the code using the Java compiler:
     ```bash
-    javac MyseryAdventureGame.java
+    javac MysteryAdventureGame.java
     ```
 5.  **Run** the compiled program:
     ```bash
