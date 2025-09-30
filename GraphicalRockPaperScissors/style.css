@@ -1,0 +1,110 @@
+body {
+    background-color: #1c2128;
+    color: #cdd9e5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: #2d333b;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #539bf5;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.score-card {
+    background-color: #22272e;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100px;
+}
+
+.score-card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.score-card p {
+    margin: 5px 0 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.results {
+    margin: 30px 0;
+}
+
+#result-message {
+    font-size: 1.5rem;
+    min-height: 2rem;
+}
+
+.choices-display {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+    font-size: 3rem;
+    min-height: 4rem;
+}
+
+.choices .choice-btn {
+    background: #373e47;
+    border: 2px solid #444c56;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: all 0.2s;
+}
+
+.choices .choice-btn:hover {
+    background: #444c56;
+    transform: scale(1.1);
+}
+
+#reset-btn {
+    margin-top: 20px;
+    background-color: #9a6700;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#reset-btn:hover {
+    background-color: #b37700;
+}
+
+/* Glow effects for winning/losing */
+.win-glow {
+    box-shadow: 0 0 20px 5px #2ea043;
+}
+.lose-glow {
+    box-shadow: 0 0 20px 5px #da3633;
+}
+.tie-glow {
+    box-shadow: 0 0 20px 5px #768390;
+}
