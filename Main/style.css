@@ -1,0 +1,91 @@
+body {
+    background-color: #1c2128;
+    color: #cdd9e5;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #2d333b;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #444c56;
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid #444c56;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #539bf5;
+    margin: 0;
+}
+
+header p {
+    color: #768390;
+    margin-top: 5px;
+}
+
+.file-list h2 {
+    color: #cdd9e5;
+    margin-bottom: 15px;
+}
+
+.file-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.file-list li {
+    background-color: #22272e;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.file-list a, .static-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #cdd9e5;
+}
+
+.file-list a:hover {
+    background-color: #373e47;
+    transform: scale(1.02);
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+}
+
+.name {
+    flex-grow: 1;
+}
+
+.type {
+    color: #768390;
+    font-size: 0.9em;
+}
+
+.note {
+    text-align: center;
+    margin-top: 30px;
+    color: #768390;
+    font-style: italic;
+}
