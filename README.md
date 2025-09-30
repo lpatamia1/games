@@ -23,3 +23,13 @@ A classic hangman game where you guess letters to reveal a secret word before yo
 * **To Run This Game:**
     1.  Compile: `javac GuessTheWord.java`
     2.  Run: `java GuessTheWord`
+
+---
+
+### 3. Rock, Paper, Scissors ✂️
+
+A classic game of Rock, Paper, Scissors against a computer opponent.
+
+* **To Run This Game:**
+    1.  Compile: `javac RockPaperScissors.java`
+    2.  Run: `java RockPaperScissors`
